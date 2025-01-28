@@ -16,7 +16,7 @@ const MainDashboard = () => {
                 <Navbar />
                 
                 {/* Dynamic Content */}
-                <div className="p-6">
+                <div className="p-6 overflow-y-auto">
                     <Outlet />
                 </div>
             </div>
