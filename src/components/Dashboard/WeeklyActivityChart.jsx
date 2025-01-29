@@ -13,7 +13,7 @@ const data = [
 
 const WeeklyActivityChart = () => {
   return (
-    <div className="w-[730px] h-[322px] p-4 bg-white rounded-lg shadow-md">
+    <div className="w-[730px] h-[322px] p-4 bg-white rounded-2xl shadow-md">
     
       <BarChart
         width={500}

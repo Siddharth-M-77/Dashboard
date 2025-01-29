@@ -4,7 +4,7 @@ import Navbar from "./Dashboard/Navbar"
 import Sidebar from "./Dashboard/Sidebar"
 
 const MainDashboard = () => {
-    
+
     return (
         <div className="min-h-screen flex">
             {/* Sidebar */}
@@ -14,9 +14,9 @@ const MainDashboard = () => {
             <div className="flex-1 bg-gray-100">
                 {/* Navbar */}
                 <Navbar />
-                
+
                 {/* Dynamic Content */}
-                <div className="p-6 overflow-y-auto">
+                <div className="p-5 overflow-y-auto w-full">
                     <Outlet />
                 </div>
             </div>

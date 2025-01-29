@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { CreditCard, Home } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
@@ -21,11 +22,11 @@ const Sidebar = () => {
         <div className="w-[250px] sticky top-0 bg-[#FFFFFF] flex flex-col">
             <div className="flex h-[101px] items-center justify-center gap-2">
                 <CreditCard />
-                <h1 className="text-center text-xl text-[#343CCA] font-bold">BankDash</h1>
+                <h1 className="text-center text-xl mt-2 text-[#343CCA] font-bold">BankDash</h1>
             </div>
             <div className="flex flex-col items-start w-[211px]  p-4 ">
                 {menuItems?.map((item) => (
-                    <div
+                    <Link to={`${item.label}`}
                         key={item.id}
                         onClick={() => setActiveItem(item.id)}
                         className={`flex items-center w-full gap-6 mb-8 cursor-pointer`}
@@ -46,7 +47,7 @@ const Sidebar = () => {
                         >
                             {item.label}
                         </h2>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
