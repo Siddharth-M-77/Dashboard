@@ -16,7 +16,6 @@ const Sidebar = () => {
         { id: 5, label: "Credit Card", icon: <CreditCard /> },
         { id: 6, label: "Loans", icon: <HandCoins /> },
         { id: 7, label: "Services", icon: <UserCog /> },
-        { id: 8, label: "My Privileges", icon: <GiLightBulb /> },
         { id: 9, label: "Settings", icon: <Settings /> },
     ];
 

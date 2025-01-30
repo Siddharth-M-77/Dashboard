@@ -10,6 +10,7 @@ import Investment from './pages/Investment';
 import CreditCard from './pages/CreditCard';
 import Loans from './pages/Loans';
 import Services from './pages/Services';
+import Settings from './pages/Settings';
 
 const App = () => {
   const appRouter = createBrowserRouter([
@@ -48,6 +49,10 @@ const App = () => {
         {
           path: "/services",
           element: <Services />
+        },
+        {
+          path: "/settings",
+          element: <Settings />
         }
 
 
