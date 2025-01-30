@@ -1,10 +1,9 @@
 import React from 'react'
+import ProfilePage from '../components/settings/ProfilePage'
 
 const Settings = () => {
     return (
-        <div>
-
-        </div>
+        <ProfilePage/>
     )
 }
 
