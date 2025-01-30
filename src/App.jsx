@@ -8,6 +8,8 @@ import Transactions from './pages/Transactions';
 import Accounts from './pages/Accounts';
 import Investment from './pages/Investment';
 import CreditCard from './pages/CreditCard';
+import Loans from './pages/Loans';
+import Services from './pages/Services';
 
 const App = () => {
   const appRouter = createBrowserRouter([
@@ -38,6 +40,14 @@ const App = () => {
         {
           path: "/credit-card",
           element: <CreditCard />
+        },
+        {
+          path: "/loans",
+          element: <Loans />
+        },
+        {
+          path: "/services",
+          element: <Services />
         }
 
 

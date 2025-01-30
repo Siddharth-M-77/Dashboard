@@ -7,12 +7,12 @@ import AddNewCardAndSetting from '../components/CreditCard/AddNewCardAndSetting'
 const CreditCard = () => {
 
     return (
-        <div className='flex flex-col min-h-screen items-center w-full overflow-hidden '>
+        <div className=''>
             <Cards />
             <div>
                 <CardExpenseAndCardList />
             </div>
-            <div className='mt-5 p-4'>
+            <div className='mt-5 '>
                 <AddNewCardAndSetting />
             </div>
 

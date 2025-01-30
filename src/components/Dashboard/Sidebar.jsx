@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { CreditCard, Home } from "lucide-react";
+import { CreditCard, HandCoins, Home, Settings, User, UserCog, Worm } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
+import { FaUser } from 'react-icons/fa';
+import { GiLightBulb } from "react-icons/gi";
 
 const Sidebar = () => {
     const [activeItem, setActiveItem] = useState(null);
@@ -8,14 +10,14 @@ const Sidebar = () => {
 
     const menuItems = [
         { id: 1, label: "Dashboard", icon: <Home /> },
-        { id: 2, label: "Transaction", icon: <Home /> },
+        { id: 2, label: "Transaction", icon: <FaUser /> },
         { id: 3, label: "Accounts", icon: <Home /> },
-        { id: 4, label: "Investments", icon: <Home /> },
+        { id: 4, label: "Investments", icon: <Worm /> },
         { id: 5, label: "Credit Card", icon: <CreditCard /> },
-        { id: 6, label: "Loans", icon: <Home /> },
-        { id: 7, label: "Services", icon: <Home /> },
-        { id: 8, label: "My Privileges", icon: <Home /> },
-        { id: 9, label: "Settings", icon: <Home /> },
+        { id: 6, label: "Loans", icon: <HandCoins /> },
+        { id: 7, label: "Services", icon: <UserCog /> },
+        { id: 8, label: "My Privileges", icon: <GiLightBulb /> },
+        { id: 9, label: "Settings", icon: <Settings /> },
     ];
 
     // Handle click to update URL without UI changes
@@ -35,7 +37,7 @@ const Sidebar = () => {
                     <div
                         key={item.id}
                         onClick={() => handleClick(item.label)} // On click, change the URL
-                        className={`flex items-center w-full gap-6 mb-8 cursor-pointer`}
+                        className={`flex items-center w-full opacity-70 gap-6 mb-8 cursor-pointer`}
                     >
                         {/* Render Icon with dynamic color */}
                         <div className={`${activeItem === item.label ? "text-blue-600" : "text-black"}`}>

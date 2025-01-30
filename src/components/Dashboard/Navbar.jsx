@@ -9,15 +9,13 @@ const Navbar = () => {
                 <div className='flex '>
                     <Link to={"/"} className='text-2xl text-[#343CCA] font-bold'>Overview</Link>
                 </div>
-                <div className='flex items-center justify-center  gap-4 P-3'>
-                    <div className='bg-[#F5F7FA] w-[255px] h-[50px] flex items-center justify-center gap-2 p-3 rounded-3xl'>
-                        <Search />
-                        <input type="text" className='text-md' placeholder='Search for somethings' />
-
-
+                <div className='flex items-center justify-center gap-4'>
+                    <div className='bg-[#F5F7FA] w-[255px] h-[50px] flex items-center justify-center gap-1  rounded-[25px]'>
+                        <Search className='text-color2' />
+                        <input type="text" className='text-md placeholder-gray-400' placeholder='Search for something' />
                     </div>
                     <div className='    bg-[#F5F7FA] w-[50px] h-[50px] rounded-full flex items-center justify-center'>
-                        <Settings className='bg-[BBCAE1] ' />
+                        <Settings className='bg-[BBCAE1] text-color2 ' />
                     </div>
                     <div className='bg-[#F5F7FA] w-[50px] h-[50px] rounded-full flex items-center justify-center'>
                         <Bell className='text-[#FE5C73]' />
