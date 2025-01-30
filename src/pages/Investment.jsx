@@ -21,8 +21,8 @@ const Investment = () => {
     ];
 
     return (
-        <div className='w-full flex flex-col items-center justify-center'>
-            <div className='w-[1110px] h-[120px] mt-8 flex items-center justify-between'>
+        <div className='flex flex-col items-center justify-center'>
+            <div className='w-[1110px] h-[120px] flex items-center justify-between'>
                 {
                     investments.map((item, i) => (
                         <Header key={i} name={item.name} category={item.category} icon={item.icon} bgColor={item.bgColor} />
@@ -35,12 +35,14 @@ const Investment = () => {
                 <InvestmentGraph />
             </div>
 
-            <div className='flex flex-col md:flex-row items-start justify-between gap-10 mt-5 '>
-                <div className='w-[635px]'>
+            <div className='w-[1110px] h-[400px] flex gap-16 items-center justify-between  mt-5'>
+
+
+                <div className='w-[635px] h-[345px] '>
                     <h1 className='text-color text-[22px] font-[600] mb-5'>My Investment</h1>
-                    <div className='w-full h-auto px-5 flex flex-col items-center'>
+                    <div className='w-full h-auto px-4 flex flex-col items-center'>
                         {investments.map((item) => (
-                            <div key={item.id} className='flex items-center w-[635px] gap-3 bg-white shadow-md h-[90px] justify-between rounded-xl px-4 py-3 mb-4'>
+                            <div key={item.id} className='flex items-center w-[635px] gap-3 bg-white shadow-md h-[90px] justify-between rounded-xl px-4 py-3 mb-5'>
                                 <div className='flex items-center gap-3'>
                                     <div className={`w-[60px] h-[60px] flex items-center justify-center rounded-full ${item.bgColor}`}>{item.icon}</div>
                                     <div className='flex flex-col items-start'>
@@ -61,10 +63,10 @@ const Investment = () => {
                     </div>
                 </div>
 
-                <div className="w-[445px] h-[310px] flex items-start flex-col p-4">
-                    <h2 className="text-[22px] font-[600] text-gray-700 mb-3">Trending Stocks</h2>
+                <div className="w-[445px] h-[345px] flex  items-start flex-col justify-between ">
+                    <h2 className="text-[22px] font-[600] text-gray-700 mb-4">Trending Stocks</h2>
                     <div className='bg-white shadow-md rounded-[25px] p-4'>
-                        <table className="w-full border-collapse">
+                        <table className="w-full h-[280px] border-collapse">
                             <thead>
                                 <tr className="border-b border-gray-300 border-opacity-50">
                                     <th className="text-left text-gray-500 p-2">SL No</th>

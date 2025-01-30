@@ -72,9 +72,9 @@ const DebitCreditGraph = () => {
             {/* Right Side */}
             <div className='h-[411px] w-[350px]  '>
                 <h1 className='mb-4  text-xl text-color'>Invoices Sent</h1>
-                <div className=' shadow-2xl rounded-[25px] h-[364px] flex flex-col py-5 px-4'>
+                <div className=' shadow-2xl bg-white rounded-[25px] h-[364px] flex flex-col py-5 px-4'>
                     {data.map((item, index) => (
-                        <div key={index} className='w-[300px]  h-[60px] rounded-[25px] flex items-center justify-between p-2 mb-6'>
+                        <div key={index} className='w-[300px]   h-[60px] rounded-[25px] flex items-center justify-between p-2 mb-6'>
                             {/* Icon and Details */}
                             <div className='flex items-center gap-3'>
                                 <div

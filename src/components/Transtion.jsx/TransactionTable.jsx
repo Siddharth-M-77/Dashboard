@@ -1,3 +1,4 @@
+import { MoveDown, MoveUp } from "lucide-react";
 import React, { useState } from "react";
 
 const transactions = [
@@ -15,7 +16,6 @@ const itemsPerPage = 5;
 
 const TransactionTable = () => {
     const [currentPage, setCurrentPage] = useState(1);
-
     const totalPages = Math.ceil(transactions.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const currentTransactions = transactions.slice(startIndex, startIndex + itemsPerPage);
@@ -23,17 +23,6 @@ const TransactionTable = () => {
     return (
         <div className="w-[1110px] h-[397px] bg-white shadow-md rounded-xl p-4">
             <h2 className="text-lg font-semibold text-gray-700 mb-3">Recent Transactions</h2>
-
-            {/* Tabs */}
-            <div className="flex border-b mb-2">
-                {["All Transactions", "Income", "Expense"].map((tab, i) => (
-                    <button key={i} className={`px-4 py-2 text-sm font-medium ${i === 0 ? "border-b-2 border-blue-500 text-blue-600" : "text-gray-500"}`}>
-                        {tab}
-                    </button>
-                ))}
-            </div>
-
-            {/* Table */}
             <div className="overflow-auto">
                 <table className="w-full text-sm text-left">
                     <thead className="text-gray-500 border-b">
@@ -49,9 +38,12 @@ const TransactionTable = () => {
                     </thead>
                     <tbody>
                         {currentTransactions.map((txn, i) => (
-                            <tr key={i} className="border-b">
-                                <td className="py-2 flex items-center gap-2">
-                                    {txn.amount > 0 ? "⬇️" : "⬆️"} {txn.desc}
+                            <tr key={i} className="border-b w-[1035px] mb-3 h-[50px]">
+                                <td className="flex items-center gap-2 p-2">
+                                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200">
+                                        {txn.amount > 0 ? <MoveDown size={20} /> : <MoveUp size={20} />}
+                                    </div>
+                                    {txn.desc}
                                 </td>
                                 <td>{txn.id}</td>
                                 <td>{txn.type}</td>
@@ -61,7 +53,7 @@ const TransactionTable = () => {
                                     {txn.amount > 0 ? `+$${txn.amount}` : `-$${Math.abs(txn.amount)}`}
                                 </td>
                                 <td>
-                                    <button className="px-3 py-1 border border-blue-500 text-blue-500 rounded-md hover:bg-blue-100">
+                                    <button className="px-3 text-[15px] font-[400] py-1 border border-blue-500 text-blue-500 rounded-[50px] hover:bg-blue-100">
                                         Download
                                     </button>
                                 </td>
@@ -70,8 +62,6 @@ const TransactionTable = () => {
                     </tbody>
                 </table>
             </div>
-
-            {/* Pagination Controls */}
             <div className="flex justify-between items-center mt-4 px-2">
                 <button
                     onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
@@ -80,20 +70,17 @@ const TransactionTable = () => {
                 >
                     &lt; Previous
                 </button>
-
                 <div className="flex gap-2">
                     {Array.from({ length: totalPages }, (_, i) => (
                         <button
                             key={i + 1}
                             onClick={() => setCurrentPage(i + 1)}
-                            className={`w-8 h-8 flex items-center justify-center rounded-md text-sm font-medium ${currentPage === i + 1 ? "bg-blue-500 text-white" : "text-gray-600 hover:bg-gray-200"
-                                }`}
+                            className={`w-8 h-8 flex items-center justify-center rounded-md text-sm font-medium ${currentPage === i + 1 ? "bg-blue-500 text-white" : "text-gray-600 hover:bg-gray-200"}`}
                         >
                             {i + 1}
                         </button>
                     ))}
                 </div>
-
                 <button
                     onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
                     className="text-sm text-blue-500 disabled:text-gray-400"

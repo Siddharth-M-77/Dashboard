@@ -6,7 +6,7 @@ import Sidebar from "./Dashboard/Sidebar"
 const MainDashboard = () => {
 
     return (
-        <div className="min-h-screen flex">
+        <div className="flex">
             {/* Sidebar */}
             <div className="sticky top-0">
 

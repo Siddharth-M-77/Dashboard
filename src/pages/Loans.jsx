@@ -13,8 +13,8 @@ const Loans = () => {
     ];
 
     return (
-        <div className="w-full flex items-center flex-col justify-center gap-10">
-            <div className='flex items-center justify-center '>
+        <div className="flex flex-col items-center gap-8">
+            <div className='flex items-center justify-center gap-6 '>
                 {investments.map((item) => (
                     <Card
                         key={item.id}
@@ -27,7 +27,9 @@ const Loans = () => {
 
                 ))}
             </div>
-            <Table />
+            <div className='w-[1110px]  flex items-center justify-center'>
+                <Table />
+            </div>
         </div>
     );
 };

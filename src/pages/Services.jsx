@@ -1,6 +1,7 @@
 import React from 'react'
 import { Apple, Banknote, Bitcoin, Briefcase } from 'lucide-react';
 import Header from '../components/Investment.jsx/Header';
+import BankServicesList from '../components/services/BankServices';
 
 const Services = () => {
     const investments = [
@@ -13,13 +14,14 @@ const Services = () => {
     return (
         <div className='flex flex-col gap-5 items-center'>
 
-            <div className='w-[1110px] h-[120px] mt-8 flex items-center justify-center'>
+            <div className='w-[1110px] h-[120px] mt-8  gap-6 flex items-center justify-center'>
                 {
                     investments.map((item, i) => (
                         <Header key={i} name={item.name} category={item.category} icon={item.icon} bgColor={item.bgColor} />
                     ))
                 }
             </div>
+            <BankServicesList/>
 
 
         </div>
