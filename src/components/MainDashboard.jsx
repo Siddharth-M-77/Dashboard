@@ -8,15 +8,18 @@ const MainDashboard = () => {
     return (
         <div className="min-h-screen flex">
             {/* Sidebar */}
+            <div className="sticky top-0">
+
             <Sidebar />
+            </div>
 
             {/* Main Content Area */}
-            <div className="flex-1 bg-gray-100">
+            <div className="flex-1 bg-gray-100 ">
                 {/* Navbar */}
                 <Navbar />
 
                 {/* Dynamic Content */}
-                <div className="p-5 overflow-y-auto w-full">
+                <div className="overflow-y-auto mt-5 ">
                     <Outlet />
                 </div>
             </div>

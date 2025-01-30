@@ -33,33 +33,34 @@ const Dashboard = () => {
             amount: 5400,
         },
     ];
+    const data = []
     return (
-        <div className='w-full flex gap-4 flex-col items-start justify-center'>
+        <div className='w-full flex gap-4 flex-col  justify-center'>
 
             {/* main section */}
             <div className='flex w-full items-center justify-center gap-8'>
                 <section className='w-[730px]  h-[282px]'>
                     <div className='flex items-center text-[#343C6A] mb-4 px-4 font-semibold justify-between'>
-                        <h1>MY Cards</h1>
-                        <h4>See All</h4>
+                        <h1 className='text-[22px]'>MY Cards</h1>
+                        <h4 className='text-[17px]'>See All</h4>
                     </div>
                     <div className='flex gap-8 items-center justify-center'>
                         {/* First Card with blue background */}
-                        <Card color="#1e3a8a" text="white" />
+                        <Card color="#1e3a8a" text="white" circle="white" />
 
                         {/* Second Card with white background and black text */}
-                        <Card color="white" text="black" />
+                        <Card color="white" text="black" circle="black" />
                     </div>
                 </section>
                 <section className="w-[350px]  flex flex-col gap-3 h-[282px] ">
-                    <h1 className="text-[#343C6A] text-xl font-semibold">Recent Transactions</h1>
+                    <h1 className="text-[#343C6A] text-[22px] font-semibold">Recent Transactions</h1>
                     <TransactionCard transactions={transactions} />
                 </section>
             </div>
             {/* graph section */}
-            <div className='flex items-center justify-between gap-14'>
+            <div className='flex items-center justify-center  gap-10 p-4'>
                 <div className='h-[367px]'>
-                    <h2 className="text-xl font-semibold mb-4 opacity-80  text-[#343C6A] ">Weekly Activity</h2>
+                    <h2 className="text-[22px] font-[600] mb-4 opacity-80  text-[#343C6A] ">Weekly Activity</h2>
                     <WeeklyActivityChart />
                 </div>
                 <section className="w-[350px]  flex flex-col justify-between gap-3 h-[367px] ">
@@ -75,33 +76,40 @@ const Dashboard = () => {
             </div>
             {/*  */}
 
-            <div className='w-full mt-3 flex items-center justify-between'>
+            <div className='w-full mt-3 flex items-center justify-center gap-8'>
                 <div className='w-[445px] h-[323px] flex flex-col gap-4'>
-                    <h1 className='text-color text-xl font-semibold'>Quick Transfer</h1>
-                    <div className='h-[276px] flex flex-col p-8 bg-white shadow-2xl rounded-2xl gap-8'>
+                    <h1 className='text-color text-[22px] font-[600]'>Quick Transfer</h1>
+                    <div className='h-[276px] flex flex-col p-4 bg-white shadow-2xl rounded-2xl gap-8'>
                         <div className='images w-[394px] flex gap-9 items-center h-[127px]'>
                             <div className='flex items-center flex-col justify-start'>
                                 <div className='w-[70px] h-[70px] rounded-full overflow-hidden'>
                                     <img className='w-full h-full object-cover' src="https://plus.unsplash.com/premium_photo-1668319915476-5cc7717e00f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZWwlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="" />
                                 </div>
-                                <h2>Livia Bator</h2>
-                                <h3>CEO</h3>
+                                <div className='flex w-[85px] h-[42px] items-center justify-center flex-col'>
+                                    <h2 className='flex'>Livia Bator</h2>
+                                    <h3>CEO</h3>
+                                </div>
+                            </div>
+                            <div className='flex items-center flex-col justify-start'>
+                                <div className='w-[70px] h-[70px]  rounded-full overflow-hidden'>
+                                    <img className='w-full h-full object-cover' src="https://plus.unsplash.com/premium_photo-1668319915476-5cc7717e00f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZWwlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="" />
+                                </div>
+                                <div className='flex w-[85px] h-[42px] items-center justify-center flex-col'>
+                                    <h2 className='flex'>Livia Bator</h2>
+                                    <h3>CEO</h3>
+                                </div>
                             </div>
                             <div className='flex items-center flex-col justify-start'>
                                 <div className='w-[70px] h-[70px] rounded-full overflow-hidden'>
                                     <img className='w-full h-full object-cover' src="https://plus.unsplash.com/premium_photo-1668319915476-5cc7717e00f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZWwlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="" />
                                 </div>
-                                <h2>Livia Bator</h2>
-                                <h3>CEO</h3>
-                            </div>
-                            <div className='flex items-center flex-col justify-start'>
-                                <div className='w-[70px] h-[70px] rounded-full overflow-hidden'>
-                                    <img className='w-full h-full object-cover' src="https://plus.unsplash.com/premium_photo-1668319915476-5cc7717e00f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZWwlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="" />
+                                <div className='flex w-[85px] h-[42px] items-center justify-center flex-col'>
+                                    <h2 className='flex'>Livia Bator</h2>
+                                    <h3>CEO</h3>
                                 </div>
-                                <h2>Livia Bator</h2>
-                                <h3>CEO</h3>
                             </div>
-                            <div className='p-5 text-color rounded-full bg-white shadow-2xl flex items-center justify-center'>
+
+                            <div className='p-5 mr-6 text-color rounded-full bg-white shadow-2xl flex items-center justify-center'>
                                 <ChevronRight />
                             </div>
 
@@ -126,7 +134,6 @@ const Dashboard = () => {
                 </div>
                 <div className=''>
                     <BalanceHistory />
-
                 </div>
 
             </div>

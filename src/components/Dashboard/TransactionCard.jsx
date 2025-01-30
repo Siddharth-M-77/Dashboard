@@ -18,15 +18,15 @@ const TransactionCard = ({ transactions }) => {
                         </div>
                         {/* Transaction Info */}
                         <div>
-                            <h3 className="font-semibold text-sm text-black">
+                            <h3 className="font-semibold text-[16px] text-black">
                                 {transaction.title}
                             </h3>
-                            <p className="text-xs text-gray-500">{transaction.date}</p>
+                            <p className="text-[15px] text-gray-500">{transaction.date}</p>
                         </div>
                     </div>
                     {/* Amount */}
                     <p
-                        className={`font-bold ${transaction.amount < 0 ? "text-red-500" : "text-green-500"
+                        className={`font-bold text-[16px] ${transaction.amount < 0 ? "text-red-500" : "text-green-500"
                             }`}
                     >
                         {transaction.amount < 0
