@@ -21,7 +21,7 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-gray-50 p-6 min-h-screen">
+    <div className="flex flex-col items-center p-6 min-h-screen">
       <div className="w-[1110px] h-[717px] bg-white shadow-md rounded-lg p-8">
         {/* Tabs */}
         <div className="flex border-b border-gray-300 mb-8">
@@ -43,7 +43,7 @@ const ProfilePage = () => {
 
         {/* Content */}
         {activeTab === "editProfile" && (
-          <div className="flex gap-2 justify-between">
+          <div className="flex gap-8 justify-between">
 
             <div className="flex flex-col items-center ">
               <div className="w-28 h-28 rounded-full flex relative overflow-hidden">
@@ -61,7 +61,7 @@ const ProfilePage = () => {
             {/* Form */}
             <form className="grid grid-cols-2 gap-4 w-full">
               <div>
-                <label className="block text-sm text-gray-700 mb-1">Your Name</label>
+                <label className="block text-[14px] font-[400] text-gray-700 mb-1">Your Name</label>
                 <input
                   type="text"
                   className="w-[418px] h-[50px] border rounded-[15px] px-4 py-2 text-sm"
@@ -69,7 +69,7 @@ const ProfilePage = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-700 mb-1">User Name</label>
+                <label className="block text-[14px] font-[400] text-gray-700 mb-1">User Name</label>
                 <input
                   type="text"
                   className="w-[418px] h-[50px] border rounded-[15px] px-4 py-2 text-sm"
@@ -77,7 +77,7 @@ const ProfilePage = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-700 mb-1">Email</label>
+                <label className="block text-[14px] font-[400] text-gray-700 mb-1">Email</label>
                 <input
                   type="email"
                   className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
@@ -85,7 +85,7 @@ const ProfilePage = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-700 mb-1">Password</label>
+                <label className="block text-[14px] font-[400] text-gray-700 mb-1">Password</label>
                 <input
                   type="password"
                   className="w-[418px] h-[50px] border rounded-[15px] px-4 py-2 text-sm"
@@ -93,50 +93,50 @@ const ProfilePage = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-700 mb-1">Date of Birth</label>
+                <label className="block text-[14px] font-[400] text-gray-700 mb-1">Date of Birth</label>
                 <input
                   type="date"
-                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-[15px] font-[400]"
                   defaultValue="1990-01-25"
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-700 mb-1">Present Address</label>
+                <label className="block text-[14px] font-[400] text-gray-700 mb-1">Present Address</label>
                 <input
                   type="text"
-                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px]  border rounded-[15px]  px-4 py-2 text-[15px] font-[400]"
                   defaultValue="San Jose, California, USA"
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-700 mb-1">Permanent Address</label>
+                <label className="block text-[14px] font-[400] text-gray-700 mb-1">Permanent Address</label>
                 <input
                   type="text"
-                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-[15px] font-[400]"
                   defaultValue="San Jose, California, USA"
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-700 mb-1">City</label>
+                <label className="block text-[14px] font-[400] text-gray-700 mb-1">City</label>
                 <input
                   type="text"
-                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-[15px] font-[400]"
                   defaultValue="San Jose"
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-700 mb-1">Postal Code</label>
+                <label className="block text-[14px] font-[400] text-gray-700 mb-1">Postal Code</label>
                 <input
                   type="text"
-                  className="w-[418px] h-[50px] border rounded-[15px] px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px] px-4 py-2 text-[15px] font-[400]"
                   defaultValue="45962"
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-700 mb-1">Country</label>
+                <label className="block text-[14px] font-[400] text-gray-700 mb-1">Country</label>
                 <input
                   type="text"
-                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-[15px] font-[400]"
                   defaultValue="USA"
                 />
               </div>
@@ -150,25 +150,25 @@ const ProfilePage = () => {
             <form className="grid grid-cols-2 gap-6">
               {/* Currency */}
               <div>
-                <label className="block text-sm text-gray-700 mb-1">Currency</label>
+                <label className="block text-[14px] font-[400] text-gray-700 mb-1">Currency</label>
                 <input
                   type="text"
-                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
+                  className="w-[510px] h-[50px] border rounded-[15px]  px-4 py-2 text-[15px] font-[400]"
                   defaultValue="USD"
                 />
               </div>
               {/* Time Zone */}
               <div>
-                <label className="block text-sm text-gray-700 mb-1">Time Zone</label>
+                <label className="block text-[16px] font-[400] text-gray-700 mb-1">Time Zone</label>
                 <input
                   type="text"
-                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
+                  className="w-[510px] h-[50px] border rounded-[15px]  px-4 py-2 text-[15px] font-[400]"
                   defaultValue="(GMT-12:00) International Date Line West"
                 />
               </div>
               {/* Notifications */}
               <div className="col-span-2">
-                <label className="block text-sm text-gray-700 mb-2">Notification</label>
+                <label className="block text-[17px] font-[400] text-gray-700 mb-4">Notification</label>
                 <div className="flex flex-col space-y-4">
                   {/* Toggle 1 */}
                   <div className="flex items-center">
@@ -219,6 +219,11 @@ const ProfilePage = () => {
                     </span>
                   </div>
                 </div>
+                <div className="mt-6 p-5 flex items-center justify-end">
+                  <button className="bg-[#1814F3] w-[190px] h-[50px] text-white font-medium rounded-full px-8 py-3">
+                    Save
+                  </button>
+                </div>
               </div>
             </form>
           </div>
@@ -252,7 +257,7 @@ const ProfilePage = () => {
                   <label className="block text-sm text-gray-700 mb-1">Current Password</label>
                   <input
                     type="password"
-                    className="w-full border rounded-lg px-4 py-2 text-sm"
+                    className="w-[510px] h-[50px] border rounded-[15px] px-4 py-2 text-sm"
                     placeholder="Current Password"
                   />
                 </div>
@@ -260,13 +265,15 @@ const ProfilePage = () => {
                   <label className="block text-sm text-gray-700 mb-1">New Password</label>
                   <input
                     type="password"
-                    className="w-full border rounded-lg px-4 py-2 text-sm"
+                    className="w-[510px] h-[50px] border rounded-[15px] px-4 py-2 text-sm"
                     placeholder="New Password"
                   />
                 </div>
-                <button className="bg-blue-500 text-white font-medium rounded-full px-8 py-3">
-                  Save
-                </button>
+                <div className="mt-6 p-5 flex items-center justify-end">
+                  <button className="bg-[#1814F3] w-[190px] h-[50px] text-white font-medium rounded-full px-8 py-3">
+                    Save
+                  </button>
+                </div>
               </form>
             </div>
           </div>
@@ -274,8 +281,8 @@ const ProfilePage = () => {
 
         {/* Save Button */}
         {activeTab === "editProfile" && (
-          <div className="mt-6">
-            <button className="bg-blue-500 w-[190px] h-[50px] text-white font-medium rounded-full px-8 py-3">
+          <div className="mt-6 p-5 flex items-center justify-end">
+            <button className="bg-[#1814F3] w-[190px] h-[50px] text-white font-medium rounded-full px-8 py-3">
               Save
             </button>
           </div>
