@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import { CreditCard, HandCoins, Home, Settings, User, UserCog, Worm } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
-import { GiLightBulb } from "react-icons/gi";
 
 const Sidebar = () => {
     const [activeItem, setActiveItem] = useState(null);
-    const navigate = useNavigate(); // useNavigate hook
+    const navigate = useNavigate();
 
     const menuItems = [
         { id: 1, label: "Dashboard", icon: <Home /> },
@@ -24,6 +23,7 @@ const Sidebar = () => {
         setActiveItem(label); // Set active state
         navigate(`/${label.toLowerCase().replace(/ /g, '-')}`); // Update URL dynamically
     };
+    
 
     return (
         <div className="w-[250px] sticky top-0 bg-[#FFFFFF] flex flex-col items-center">

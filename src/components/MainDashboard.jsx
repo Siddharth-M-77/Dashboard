@@ -6,10 +6,9 @@ import Sidebar from "./Dashboard/Sidebar"
 const MainDashboard = () => {
 
     return (
-        <div className="flex">
+        <div className="flex w-full">
             {/* Sidebar */}
             <div className="sticky top-0">
-
             <Sidebar />
             </div>
 

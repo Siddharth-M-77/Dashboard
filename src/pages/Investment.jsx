@@ -31,8 +31,8 @@ const Investment = () => {
             </div>
 
             <div className='flex flex-col md:flex-row items-center justify-between gap-4 mt-10'>
-                <InvestmentGraph />
-                <InvestmentGraph />
+                <InvestmentGraph dynamicTitle="Yearly Total Investment" />
+                <InvestmentGraph dynamicTitle="Monthly Revenue" />
             </div>
 
             <div className='w-[1110px] h-[400px] flex gap-16 items-center justify-between  mt-5'>
