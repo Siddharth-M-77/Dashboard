@@ -28,11 +28,10 @@ const ProfilePage = () => {
           {["editProfile", "preferences", "security"].map((tab) => (
             <button
               key={tab}
-              className={`px-4 py-2 text-sm font-medium ${
-                activeTab === tab
-                  ? "text-blue-600 border-b-2 border-blue-600"
-                  : "text-gray-500 hover:text-blue-600"
-              }`}
+              className={`px-4 py-2 text-sm font-medium ${activeTab === tab
+                ? "text-blue-600 border-b-2 border-blue-600"
+                : "text-gray-500 hover:text-blue-600"
+                }`}
               onClick={() => setActiveTab(tab)}
             >
               {tab === "editProfile"
@@ -44,12 +43,12 @@ const ProfilePage = () => {
 
         {/* Content */}
         {activeTab === "editProfile" && (
-          <div className="grid grid-cols-2 gap-6">
-            {/* Left Section */}
-            <div className="flex flex-col items-center">
-              <div className="w-28 h-28 rounded-full bg-gray-200 flex items-center justify-center relative overflow-hidden">
+          <div className="flex gap-2 justify-between">
+
+            <div className="flex flex-col items-center ">
+              <div className="w-28 h-28 rounded-full flex relative overflow-hidden">
                 <img
-                  src="https://via.placeholder.com/150"
+                  src="https://images.unsplash.com/photo-1735230495173-acf77f646286?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -65,7 +64,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">Your Name</label>
                 <input
                   type="text"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px] px-4 py-2 text-sm"
                   defaultValue="Charlene Reed"
                 />
               </div>
@@ -73,7 +72,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">User Name</label>
                 <input
                   type="text"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px] px-4 py-2 text-sm"
                   defaultValue="Charlene Reed"
                 />
               </div>
@@ -81,7 +80,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">Email</label>
                 <input
                   type="email"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
                   defaultValue="charlenereed@gmail.com"
                 />
               </div>
@@ -89,7 +88,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">Password</label>
                 <input
                   type="password"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px] px-4 py-2 text-sm"
                   defaultValue="********"
                 />
               </div>
@@ -97,7 +96,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">Date of Birth</label>
                 <input
                   type="date"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
                   defaultValue="1990-01-25"
                 />
               </div>
@@ -105,7 +104,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">Present Address</label>
                 <input
                   type="text"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
                   defaultValue="San Jose, California, USA"
                 />
               </div>
@@ -113,7 +112,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">Permanent Address</label>
                 <input
                   type="text"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
                   defaultValue="San Jose, California, USA"
                 />
               </div>
@@ -121,7 +120,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">City</label>
                 <input
                   type="text"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
                   defaultValue="San Jose"
                 />
               </div>
@@ -129,7 +128,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">Postal Code</label>
                 <input
                   type="text"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px] px-4 py-2 text-sm"
                   defaultValue="45962"
                 />
               </div>
@@ -137,7 +136,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">Country</label>
                 <input
                   type="text"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
                   defaultValue="USA"
                 />
               </div>
@@ -154,7 +153,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">Currency</label>
                 <input
                   type="text"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
                   defaultValue="USD"
                 />
               </div>
@@ -163,7 +162,7 @@ const ProfilePage = () => {
                 <label className="block text-sm text-gray-700 mb-1">Time Zone</label>
                 <input
                   type="text"
-                  className="w-full border rounded-lg px-4 py-2 text-sm"
+                  className="w-[418px] h-[50px] border rounded-[15px]  px-4 py-2 text-sm"
                   defaultValue="(GMT-12:00) International Date Line West"
                 />
               </div>
@@ -174,15 +173,13 @@ const ProfilePage = () => {
                   {/* Toggle 1 */}
                   <div className="flex items-center">
                     <div
-                      className={`w-12 h-6 rounded-full cursor-pointer transition ${
-                        preferences.digitalCurrency ? "bg-blue-500" : "bg-gray-300"
-                      }`}
+                      className={`w-12 h-6 rounded-full cursor-pointer transition ${preferences.digitalCurrency ? "bg-blue-500" : "bg-gray-300"
+                        }`}
                       onClick={() => togglePreference("digitalCurrency")}
                     >
                       <div
-                        className={`w-6 h-6 bg-white rounded-full transition transform ${
-                          preferences.digitalCurrency ? "translate-x-6" : "translate-x-0"
-                        }`}
+                        className={`w-6 h-6 bg-white rounded-full transition transform ${preferences.digitalCurrency ? "translate-x-6" : "translate-x-0"
+                          }`}
                       ></div>
                     </div>
                     <span className="ml-4 text-sm text-gray-700">
@@ -192,15 +189,13 @@ const ProfilePage = () => {
                   {/* Toggle 2 */}
                   <div className="flex items-center">
                     <div
-                      className={`w-12 h-6 rounded-full cursor-pointer transition ${
-                        preferences.merchantOrder ? "bg-blue-500" : "bg-gray-300"
-                      }`}
+                      className={`w-12 h-6 rounded-full cursor-pointer transition ${preferences.merchantOrder ? "bg-blue-500" : "bg-gray-300"
+                        }`}
                       onClick={() => togglePreference("merchantOrder")}
                     >
                       <div
-                        className={`w-6 h-6 bg-white rounded-full transition transform ${
-                          preferences.merchantOrder ? "translate-x-6" : "translate-x-0"
-                        }`}
+                        className={`w-6 h-6 bg-white rounded-full transition transform ${preferences.merchantOrder ? "translate-x-6" : "translate-x-0"
+                          }`}
                       ></div>
                     </div>
                     <span className="ml-4 text-sm text-gray-700">
@@ -210,15 +205,13 @@ const ProfilePage = () => {
                   {/* Toggle 3 */}
                   <div className="flex items-center">
                     <div
-                      className={`w-12 h-6 rounded-full cursor-pointer transition ${
-                        preferences.recommendations ? "bg-blue-500" : "bg-gray-300"
-                      }`}
+                      className={`w-12 h-6 rounded-full cursor-pointer transition ${preferences.recommendations ? "bg-blue-500" : "bg-gray-300"
+                        }`}
                       onClick={() => togglePreference("recommendations")}
                     >
                       <div
-                        className={`w-6 h-6 bg-white rounded-full transition transform ${
-                          preferences.recommendations ? "translate-x-6" : "translate-x-0"
-                        }`}
+                        className={`w-6 h-6 bg-white rounded-full transition transform ${preferences.recommendations ? "translate-x-6" : "translate-x-0"
+                          }`}
                       ></div>
                     </div>
                     <span className="ml-4 text-sm text-gray-700">
@@ -237,15 +230,13 @@ const ProfilePage = () => {
             {/* Two-factor Authentication Toggle */}
             <div className="flex items-center mt-4">
               <div
-                className={`w-12 h-6 rounded-full cursor-pointer transition ${
-                  twoFactorAuth ? "bg-blue-500" : "bg-gray-300"
-                }`}
+                className={`w-12 h-6 rounded-full cursor-pointer transition ${twoFactorAuth ? "bg-blue-500" : "bg-gray-300"
+                  }`}
                 onClick={() => setTwoFactorAuth(!twoFactorAuth)}
               >
                 <div
-                  className={`w-6 h-6 bg-white rounded-full transition transform ${
-                    twoFactorAuth ? "translate-x-6" : "translate-x-0"
-                  }`}
+                  className={`w-6 h-6 bg-white rounded-full transition transform ${twoFactorAuth ? "translate-x-6" : "translate-x-0"
+                    }`}
                 ></div>
               </div>
               <span className="ml-4 text-sm text-gray-700">
@@ -284,7 +275,7 @@ const ProfilePage = () => {
         {/* Save Button */}
         {activeTab === "editProfile" && (
           <div className="mt-6">
-            <button className="bg-blue-500 text-white font-medium rounded-full px-8 py-3">
+            <button className="bg-blue-500 w-[190px] h-[50px] text-white font-medium rounded-full px-8 py-3">
               Save
             </button>
           </div>
