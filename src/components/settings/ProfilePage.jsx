@@ -21,8 +21,8 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center p-6 min-h-screen">
-      <div className="w-[1110px] h-[717px] bg-white shadow-md rounded-lg p-8">
+    <div className="flex flex-col items-center">
+      <div className="w-[1110px] h-[717px] bg-white shadow-md rounded-lg p-6">
         {/* Tabs */}
         <div className="flex border-b border-gray-300 mb-8">
           {["editProfile", "preferences", "security"].map((tab) => (
@@ -43,7 +43,7 @@ const ProfilePage = () => {
 
         {/* Content */}
         {activeTab === "editProfile" && (
-          <div className="flex gap-8 justify-between">
+          <div className="flex w-[1110px] h-[531px] gap-8 justify-between">
 
             <div className="flex flex-col items-center ">
               <div className="w-28 h-28 rounded-full flex relative overflow-hidden">
@@ -169,16 +169,16 @@ const ProfilePage = () => {
               {/* Notifications */}
               <div className="col-span-2">
                 <label className="block text-[17px] font-[400] text-gray-700 mb-4">Notification</label>
-                <div className="flex flex-col space-y-4">
+                <div className="flex flex-col space-y-6">
                   {/* Toggle 1 */}
                   <div className="flex items-center">
                     <div
-                      className={`w-12 h-6 rounded-full cursor-pointer transition ${preferences.digitalCurrency ? "bg-blue-500" : "bg-gray-300"
+                      className={`w-12 h-6 rounded-full cursor-pointer transition ${preferences.digitalCurrency ? "bg-[#16DBDC]" : "bg-gray-300"
                         }`}
                       onClick={() => togglePreference("digitalCurrency")}
                     >
                       <div
-                        className={`w-6 h-6 bg-white rounded-full transition transform ${preferences.digitalCurrency ? "translate-x-6" : "translate-x-0"
+                        className={`w-6 h-6 bg-[#FFFFFF] rounded-full transition transform ${preferences.digitalCurrency ? "translate-x-6" : "translate-x-0"
                           }`}
                       ></div>
                     </div>
@@ -189,7 +189,7 @@ const ProfilePage = () => {
                   {/* Toggle 2 */}
                   <div className="flex items-center">
                     <div
-                      className={`w-12 h-6 rounded-full cursor-pointer transition ${preferences.merchantOrder ? "bg-blue-500" : "bg-gray-300"
+                      className={`w-12 h-6 rounded-full cursor-pointer transition ${preferences.merchantOrder ? "bg-[#16DBDC]" : "bg-gray-300"
                         }`}
                       onClick={() => togglePreference("merchantOrder")}
                     >
@@ -205,7 +205,7 @@ const ProfilePage = () => {
                   {/* Toggle 3 */}
                   <div className="flex items-center">
                     <div
-                      className={`w-12 h-6 rounded-full cursor-pointer transition ${preferences.recommendations ? "bg-blue-500" : "bg-gray-300"
+                      className={`w-12 h-6 rounded-full cursor-pointer transition ${preferences.recommendations ? "bg-[#16DBDC]" : "bg-gray-300"
                         }`}
                       onClick={() => togglePreference("recommendations")}
                     >
@@ -231,7 +231,7 @@ const ProfilePage = () => {
 
         {activeTab === "security" && (
           <div>
-            <h2 className="text-lg font-bold text-gray-700">Security</h2>
+            <h2 className="text-[17px] font-[500] text-gray-700">Two-factor Authentication</h2>
             {/* Two-factor Authentication Toggle */}
             <div className="flex items-center mt-4">
               <div
@@ -251,9 +251,9 @@ const ProfilePage = () => {
 
             {/* Change Password */}
             <div className="mt-6">
-              <h3 className="text-md font-semibold text-gray-700">Change Password</h3>
+              <h3 className="text-[17px] font-[500] text-[#333B69]">Change Password</h3>
               <form className="grid grid-cols-1 gap-4 mt-4">
-                <div>
+                <div className="">
                   <label className="block text-sm text-gray-700 mb-1">Current Password</label>
                   <input
                     type="password"
