@@ -26,10 +26,13 @@ const Sidebar = () => {
     };
 
     return (
-        <div className="w-[250px] sticky top-0 bg-[#FFFFFF] flex flex-col">
-            <div className="flex h-[101px] items-center justify-center gap-2">
-                <CreditCard />
-                <h1 className="text-center text-xl mt-2 text-[#343CCA] font-bold">BankDash</h1>
+        <div className="w-[250px] sticky top-0 bg-[#FFFFFF] flex flex-col items-center">
+            <div className="flex h-[101px] items-center justify-start">
+                <div className='flex items-center justify-center gap-3'>
+                    <CreditCard size={36} className='text-[#343CCA]' />
+                    <h1 className=" text-[25px] font-[900] mt-2 text-[#343CCA] ">BankDash</h1>
+
+                </div>
             </div>
             <div className="flex flex-col items-start w-[211px] p-4 ">
                 {menuItems?.map((item) => (
